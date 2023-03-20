@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather">
+       <form class="search-form" id="search-form">
+         <div class="row">
+        <div class="col-7">
+          <input
+            type="search"
+            id="search-text"
+            class="form-control shadow-sm"
+            placeholder="Search for location"
+          />
+        </div>
+          <div class="col-3">
+          <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+          </div>
+        </div>
+      
+       </form>
+        <h1 id="city">
+          Kyiv
+        </h1>
+          <p>Updated <span id="nowdate"></span>
+          </p>
+        <div class="row">
+          <div class="col-6">
+            <div class="temp_1">
+              <img src="./img/3.png" alt="" class="weather-img" />
+              <span class="temper" id="temper">3</span>
+              <span class="degree">°C</span>
+              
+             
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li > Feel likes  <span id="feel" class="degree_feel"></span>°C</li>
+              <li id="description"></li>
+              <li>Wind: <span id="wind"> </span>  km/h </li>
+              <li>Humidity: <span id="humidity"> </span>%</li>
+              
+            </ul>
+          </div>
+            
+        </div>
+        <div class="row">  
+            <div class="col-2">
+                <div class="card">
+           Mon
+             
+             <div> 3°</div>
+             <img class="img-week" src="./img/4.png" alt="" width="50"/>
+            </div>
+            </div>
+            
+            <div class="col-2">
+                    <div class="card">
+                 Tue
+               
+                 <div > 3°</div>
+                 <img class="img-week" src="./img/2.png" alt="" width="50"/>
+                    </div>
+                </div>
+               <div class="col-2">
+                  <div class="card">
+                 Wen
+                  
+                  <div> 4°</div>
+                  <img class="img-week" src="./img/4.png" alt="" width="50"/>
+                 </div>
+               </div>
+                 <div class="col-2">
+                    <div class="card">
+                  Thu
+                  
+                    <div> 3°</div>
+                    <img class="img-week" src="./img/5.png" alt="" width="50"/>
+                   </div>
+                 </div>
+                   <div class="col-2">
+                      <div class="card">
+                    Fri
+                      
+                      <div> 4°</div>
+                      <img class="img-week" src="./img/6.png" alt="" width="50"/>
+                     </div>
+                   </div>
+                     <div class="col-2">
+                        <div class="card">
+                       Sat
+                       
+                        <div > 6°</div>
+                        <img class="img-week" src="./img/9.png" alt="" width="50"/>
+                      </div>
+                       </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

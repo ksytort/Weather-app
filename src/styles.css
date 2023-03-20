@@ -1,0 +1,63 @@
+h1 {
+  font-size: 42px;
+  margin: 0px;
+}
+.container {
+  margin: 50px auto;
+  max-width: 600px;
+}
+.weather {
+  margin: 20px auto;
+  padding: 20px;
+  display: block;
+  border: 1px solid;
+  border-radius: 10px;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+p {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+li {
+  list-style: none;
+}
+.temper {
+  font-size: 62px;
+  font-weight: 400;
+  margin: 10px;
+}
+.weather-img {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.degree_feel {
+  font-size: 18px;
+  font-weight: 500;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+.degree {
+  font-size: 24px;
+  position: relative;
+  top: -25px;
+}
+.card {
+  text-align: center;
+  font-size: 18px;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+.img-week {
+  margin: 0 auto;
+}
