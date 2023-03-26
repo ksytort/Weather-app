@@ -68,13 +68,14 @@ ul {
 }
 li {
   list-style: none;
+  font-size: 16px;
 }
 temp-1 {
   text-align: center;
   position: block;
 }
 .temper {
-  font-size: 78px;
+  font-size: 82px;
   font-weight: 400;
   margin-left: 30px;
 }
