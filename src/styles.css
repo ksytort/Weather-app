@@ -56,7 +56,7 @@ h1 {
   margin: 20px auto;
   padding: 20px;
   display: block;
-  border: 1px solid grey;
+  border: 1px solid white;
   border-radius: 10px;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
