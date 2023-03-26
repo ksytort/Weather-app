@@ -1,3 +1,10 @@
+body {
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
 h1 {
   font-size: 42px;
   margin: 0px;
@@ -49,13 +56,9 @@ h1 {
   margin: 20px auto;
   padding: 30px;
   display: block;
-  border: 1px solid;
+  border: 1px solid grey;
   border-radius: 10px;
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 p {
   margin: 0;
