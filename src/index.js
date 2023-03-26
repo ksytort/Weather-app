@@ -8,7 +8,15 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${hours}`;
 }
-let weeks = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let weeks = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 let months = [
   "January",
@@ -44,6 +52,13 @@ function currentWeather(response) {
   document.querySelector("#feel").innerHTML = Math.round(
     response.data.main.feels_like
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
   console.log(response);
 }
 
