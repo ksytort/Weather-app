@@ -137,7 +137,14 @@ function currentPlace(position) {
   let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
   axios.get(url).then(currentWeather);
 }
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text").value;
+  searchCity(cityInputElement.value);
+}
 
 navigator.geolocation.getCurrentPosition(currentPlace);
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", searchCity);
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("Kyiv");
