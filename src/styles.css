@@ -53,6 +53,9 @@ h1 {
     width: 100%;
   }
 }
+.col-4 {
+  padding: 0;
+}
 .weather {
   margin: 20px auto;
   padding: 30px;
@@ -117,10 +120,17 @@ temp-1 {
   color: #34495e;
   border: 1px solid #8dc6ff;
 }
+
 .btn:hover {
   background-color: #ffe3b0;
   border: 1px solid #ffe3b0;
   color: #34495e;
 
   cursor: pointer;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
