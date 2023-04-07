@@ -67,7 +67,6 @@ function displayForecast(response) {
             alt=""
             width="60px"
           />
-    
      <div class="weather-forecast-temperatures">
      <span class="weather-forecast-temperature-max"> ${Math.round(
        forecastDay.temperature.maximum
