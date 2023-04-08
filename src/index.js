@@ -42,7 +42,6 @@ function formatDay(time) {
   let date = new Date(time * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
   return days[day];
 }
 
@@ -60,13 +59,11 @@ function displayForecast(response) {
     <div class="col-2">
       <div class="card">
      ${formatDay(forecastDay.time)}
-     
      <img
             src="${forecastDay.condition.icon_url}"
             alt=""
             width="60px"
           />
-    
      <div class="weather-forecast-temperatures">
      <span class="weather-forecast-temperature-max"> ${Math.round(
        forecastDay.temperature.maximum
@@ -74,17 +71,16 @@ function displayForecast(response) {
      <span class="weather-forecast-temperature-min"> ${Math.round(
        forecastDay.temperature.minimum
      )}º </span>
-   </div>
-        
-          </div>
+         </div>
+        </div>
       </div>
       `;
     }
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
 function getForecast(coordinates) {
   let apiKey = "30602227b280a95fa57tboc2a111d0b4";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
@@ -93,6 +89,7 @@ function getForecast(coordinates) {
 
 function currentWeather(response) {
   document.querySelector("#city").innerHTML = response.data.city;
+  document.querySelector("#country").innerHTML = response.data.country;
   document.querySelector("#temper").innerHTML = Math.round(
     response.data.temperature.current
   );
@@ -127,6 +124,7 @@ function searchCity(city) {
   let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(url).then(currentWeather);
 }
+
 function currentPlace(position) {
   let apiKey = "30602227b280a95fa57tboc2a111d0b4";
   let lat = position.coords.latitude;

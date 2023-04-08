@@ -13,7 +13,6 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
-
   <body>
     <div class="container">
       <div class="weather">
@@ -36,7 +35,7 @@
             </div>
           </div>
         </form>
-        <h1 id="city"></h1>
+        <h1 id="city"><span id="country"></span></h1>
         <p>Updated <span id="nowdate"></span></p>
         <div class="row">
           <div class="col-8">
@@ -50,8 +49,8 @@
             <ul>
               <li>Feel likes: <span id="feel" class="degree_feel"></span>°C</li>
               <li id="description">Clear</li>
-              <li>Wind: <span id="wind"> </span> km/h</li>
-              <li>Humidity: <span id="humidity"> </span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
             </ul>
           </div>
         </div>
