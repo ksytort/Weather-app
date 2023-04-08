@@ -36,10 +36,10 @@ let day = now.getDate();
 let week = weeks[now.getDay()];
 let month = months[now.getMonth()];
 let dateNow = document.querySelector("#nowdate");
-dateNow.innerHTML = `${week} , ${month} ${day} , ${hours}:${minutes}`;
+dateNow.innerHTML = `${week} , ${month} ${day}, ${hours}:${minutes}`;
 
 function formatDay(time) {
-  let date = new Date(time);
+  let date = new Date(time * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -60,13 +60,13 @@ function displayForecast(response) {
     <div class="col-2">
       <div class="card">
      ${formatDay(forecastDay.time)}
-     <div class="date"> 
-     ${day}/${now.getMonth()} </div>
+     
      <img
             src="${forecastDay.condition.icon_url}"
             alt=""
             width="60px"
           />
+    
      <div class="weather-forecast-temperatures">
      <span class="weather-forecast-temperature-max"> ${Math.round(
        forecastDay.temperature.maximum
@@ -122,10 +122,8 @@ function currentWeather(response) {
   console.log(response);
 }
 
-function searchCity(event) {
-  event.preventDefault();
+function searchCity(city) {
   let apiKey = "30602227b280a95fa57tboc2a111d0b4";
-  let city = document.querySelector("#search-text").value;
   let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(url).then(currentWeather);
 }
@@ -136,6 +134,7 @@ function currentPlace(position) {
   let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
   axios.get(url).then(currentWeather);
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-text").value;
