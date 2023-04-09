@@ -1,9 +1,5 @@
 body {
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 h1 {
   font-size: 42px;
@@ -16,41 +12,16 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
-  .col-1 {
-    width: 8.33%;
-  }
-  .col-2 {
-    width: 16.66%;
-  }
-  .col-3 {
-    width: 25%;
-  }
   .col-4 {
     width: 33.33%;
-  }
-  .col-5 {
-    width: 41.66%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-7 {
-    width: 58.33%;
   }
   .col-8 {
     width: 66.66%;
   }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
+}
+@media (min-width: 200px) {
+  .btn {
+    background-color: red;
   }
 }
 .col-4 {
@@ -60,9 +31,10 @@ h1 {
   margin: 20px auto;
   padding: 30px;
   display: block;
-  border: 1px solid white;
+  border: 1px solid none;
   border-radius: 10px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 120%);
+  box-shadow: 0 0 10px grey;
 }
 p {
   margin: 0;
@@ -77,19 +49,18 @@ li {
   list-style: none;
   font-size: 16px;
 }
-temp-1 {
+.temp_1 {
   text-align: center;
   position: block;
 }
 .temper {
-  font-size: 82px;
+  font-size: 72px;
   font-weight: 400;
   margin-left: 30px;
 }
 .weather-img {
-  height: 100px;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .degree_feel {
@@ -100,36 +71,48 @@ temp-1 {
   margin-bottom: 20px;
 }
 .degree {
-  font-size: 32px;
+  font-size: 26px;
   position: relative;
   top: -35px;
 }
 .card {
+  height: 130px;
   text-align: center;
   border: none;
   font-size: 18px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: #ffecd2;
 }
-.img-week {
+
+.col-2 {
   margin: 0 auto;
+  position: block;
 }
 .btn {
-  background-color: #8dc6ff;
+  background: radial-gradient(
+    666px at 0.4% 48%,
+    rgb(202, 204, 227) 0%,
+    rgb(89, 89, 99) 97.5%
+  );
   font-weight: 400;
   font-size: 18px;
   color: #34495e;
-  border: 1px solid #8dc6ff;
+  border: none;
 }
 
 .btn:hover {
-  background-color: #ffe3b0;
-  border: 1px solid #ffe3b0;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  border: none;
   color: #34495e;
 
   cursor: pointer;
 }
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 .weather-forecast-temperature-min {
   opacity: 0.5;
