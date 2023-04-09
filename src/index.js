@@ -47,9 +47,7 @@ function formatDay(time) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -67,7 +65,7 @@ function displayForecast(response) {
      <div class="weather-forecast-temperatures">
      <span class="weather-forecast-temperature-max"> ${Math.round(
        forecastDay.temperature.maximum
-     )}º </span>
+     )}º </span>/
      <span class="weather-forecast-temperature-min"> ${Math.round(
        forecastDay.temperature.minimum
      )}º </span>
@@ -108,11 +106,9 @@ function currentWeather(response) {
       "src",
       `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
-
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.condition.icon_url);
-
   getForecast(response.data.coordinates);
 
   console.log(response);
@@ -124,21 +120,12 @@ function searchCity(city) {
   axios.get(url).then(currentWeather);
 }
 
-function currentPlace(position) {
-  let apiKey = "30602227b280a95fa57tboc2a111d0b4";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
-  axios.get(url).then(currentWeather);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#search-text").value;
+  let cityInputElement = document.querySelector("#search-text");
   searchCity(cityInputElement.value);
 }
 
-navigator.geolocation.getCurrentPosition(currentPlace);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
