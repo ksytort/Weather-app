@@ -54,13 +54,15 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-2">
-      <div class="card">
+    <div class="col-sm-2">
+      <div class="card d-flex justify-content-center ">
      ${formatDay(forecastDay.time)}
      <img
             src="${forecastDay.condition.icon_url}"
             alt=""
             width="60px"
+            class="img_forecast"
+
           />
      <div class="weather-forecast-temperatures">
      <span class="weather-forecast-temperature-max"> ${Math.round(
