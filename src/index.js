@@ -55,7 +55,7 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="col-sm-2">
-      <div class="card d-flex justify-content-center ">
+      <div class="card">
      ${formatDay(forecastDay.time)}
      <img
             src="${forecastDay.condition.icon_url}"
